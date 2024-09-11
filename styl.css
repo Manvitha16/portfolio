@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(img/bg.png);
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 200px;
+}
+.logo {
+  max-height: 150px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+nav ul li a {
+  color: #1d1d24;
+  position: relative;
+  padding: 5px 0;
+}
+nav ul li a:hover {
+  color: #fd4766;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: 0.3s;
+  bottom: 0;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #fd4766;
+  border: 2px solid #fd4766;
+}
+.btn:hover {
+  background: transparent;
+  border-color: #fd4766;
+  color: #fd4766;
+}
+.content {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
+.content .title {
+  color: #0a0a0a;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    120deg,
+    #fe1c85 20.69%,
+    #ff447c 50.19%,
+    #fd4766 79.69%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content h1 {
+  color: #1f1f25;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+  text-transform: inherit;
+  width: 70%;
+}
+.content h1 span {
+  color: #fd4766;
+}
+.content p {
+  width: 55%;
+  color: #202020;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+/* General Section Styling */
+section {
+  padding: 60px 20px;
+  margin: 40px 0;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Sections */
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Heading Styling */
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Adding a Line Underneath the Heading */
+h2::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #ff0077;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Paragraph and List Styling */
+p, ul {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+  transition: color 0.3s ease;
+}
+
+/* List Styling */
+ul {
+  list-style-type: square;
+  padding-left: 40px;
+}
+
+/* List Item Hover Effect */
+ul li:hover {
+  color: #ff00ae;
+  cursor: pointer;
+}
+
+/* Add Subtle Animation to Paragraphs */
+p, ul {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Keyframe Animation for Fade-in */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Section Background Color Customization */
+#education {
+  background-color: #f5f5f5;
+}
+
+#projects {
+  background-color: #e0ffff;
+}
+
+#skills {
+  background-color: #fafad2;
+}
+
+#certifications {
+  background-color: #ffe4b5;
+}
+
+#contact {
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #ff0077;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #b300ad;
+  transform: scale(1.05);
+}
+
+/* Section Title Styling */
+h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  section {
+      padding: 40px 15px;
+      margin: 30px 0;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  p, ul {
+      font-size: 16px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+}
